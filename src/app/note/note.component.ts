@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoteComponent implements OnInit {
 
-  title = "random";
-  text = "dump";
-  date = "date";
+  text = "random stuff 'cause I need something here to see how the text wraps and stuff.";
+  date = "2018-08-27";
 
   constructor() { }
 
