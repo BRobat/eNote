@@ -3,11 +3,19 @@ body {
     padding:0px;
 }
 
+textarea {
+    resize: none;
+}
+
 .navbar {
+    position: relative;
+
     height: 50px;
     width: 100%;
 
-    background-color: #999999;
+    background-color: #f7f7f7;
+
+    box-shadow: 1px 1px 5px #eeeeee;
 }
 
 .content {
@@ -19,7 +27,7 @@ body {
     border-style: none;
     border-radius: 10px;
 
-    box-shadow: 1px 1px 5px #eeeeee
+    box-shadow: 1px 1px 5px #eeeeee;
 }
 
 .container-form {
@@ -45,14 +53,57 @@ body {
 }
 
 .text-date {
+    font-size: 24px;
+}
 
+.text-login {
+    display: block;
+    margin: auto auto auto auto;
+    font-size: 24px;
 }
 
 .inpt {
+    /* hiding inner shadow when selected */
+    outline: none;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
     
+    border-radius: 5px;
 }
 
 .inpt-note {
+    border: none;
+    width: 100%;
+}
+
+.side {
+    position: absolute;
+    top: 75px;
+    right: 10px;
+}
+
+.btn {
+    border-style: none;
+}
+
+.btn-side {
+    padding: 10px;
+
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #eeeeee;
 
 }
 
+.btn-del {
+    /* It's about to change */
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #eeeeee;
+
+    margin: 10px;
+    height: 42px;
+    width: 42px;
+    background: url(assets/icons/del-icon.svg) no-repeat;
+    background-size: auto;
+    
+}

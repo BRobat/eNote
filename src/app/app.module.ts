@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -18,6 +19,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
     LoginPageComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule
   ],
   providers: [],

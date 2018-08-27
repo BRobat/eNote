@@ -2,5 +2,5 @@
   <h1 class="text text-title">
     New Note
   </h1>
-    <input class="inpt inpt-note" type="text" placeholder="..." #box (keyup.enter)="addNote(box.value)">
+    <textarea class="text inpt inpt-note" placeholder=". . ." autofocus #box (keyup.enter)="addNote(box.value)" [(ngModel)]="defaultValue"></textarea>
 </div>
