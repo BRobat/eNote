@@ -1,14 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { NoteService } from './../note.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { Note } from '../model/note';
+
 
 @Component({
   selector: 'app-note',
   templateUrl: './note.component.html',
-  styleUrls: ['./note.component.css']
+  styleUrls: ['./note.component.css'],
+  providers: [NoteService]
 })
 export class NoteComponent implements OnInit {
 
-  text = "random stuff 'cause I need something here to see how the text wraps and stuff.";
-  date = "2018-08-27";
+  @Input('note') note: Note;
 
   constructor() { }
 

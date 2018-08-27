@@ -1,23 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { NoteService } from './../note.service';
+import { Component, Input} from '@angular/core';
+import { Note } from 
+
 
 @Component({
   selector: 'app-input-form',
   templateUrl: './input-form.component.html',
   styleUrls: ['./input-form.component.css']
 })
-export class InputFormComponent implements OnInit {
+export class InputFormComponent{
 
-  defaultValue = ""
+  defaultValue = "";
+  date = "2018";
 
-  constructor() { }
+  constructor(private data: NoteService) { }
 
-  ngOnInit() {
-  }
+  newNote(text) {
+    let date = new Date().toLocaleDateString();
 
-  addNote(note) {
-    if(note){
-      console.log(note);
+    if(text){
+      this.data.addNote(text, date);
     }
     this.defaultValue= "";
     

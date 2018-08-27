@@ -4,5 +4,12 @@
 </div>
 <div class="content">
   <app-input-form></app-input-form>
-  <app-note></app-note>
+  <ng-container *ngIf="(notes$ | async) as notes">
+    <ng-container *ngFor="let note of notes">
+      <app-note [note]="note"></app-note>
+    </ng-container>
+  </ng-container>
+
+
+
 </div>

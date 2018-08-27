@@ -1,3 +1,4 @@
+import { SheetComponent } from './sheet/sheet.component';
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { map } from 'rxjs/operators';
@@ -20,11 +21,15 @@ export class NoteService {
     ));
    }
 
-   addNote(note){
+   getNotes() {
+     return this.notes$;
+   }
+
+   addNote(text, date){
      // this should be changed
      let newNote = new Note;
-     newNote.text = note.text;
-     newNote.date = note.date;
+     newNote.text = text;
+     newNote.date = date;
       
      this.notesRef.push(newNote);
    }

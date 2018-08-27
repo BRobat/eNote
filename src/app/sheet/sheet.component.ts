@@ -1,15 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NoteService } from '../note.service';
+
 
 @Component({
   selector: 'app-sheet',
   templateUrl: './sheet.component.html',
-  styleUrls: ['./sheet.component.css']
+  styleUrls: ['./sheet.component.css'],
+  providers: [NoteService]
 })
-export class SheetComponent implements OnInit {
+export class SheetComponent{
 
-  constructor() { }
+  notes$;
 
-  ngOnInit() {
+  constructor(private noteService: NoteService) {
+    
+    console.log(noteService);
+    
   }
+
+  ngOnInit(){
+    this.getNotes()
+  }
+
+  getNotes() {
+    this.notes$ = this.noteService.getNotes();
+  }
+
+
 
 }
