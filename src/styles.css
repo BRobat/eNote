@@ -59,7 +59,8 @@ textarea {
 }
 
 .text-login {
-    margin-top: 150px;
+    display: block;
+    margin: auto auto auto auto;
     font-size: 24px;
 }
 

@@ -5,6 +5,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment.prod';
 
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SheetComponent } from './sheet/sheet.component';
@@ -26,6 +27,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
