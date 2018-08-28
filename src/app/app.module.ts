@@ -7,11 +7,11 @@ import { environment } from '../environments/environment.prod';
 
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { SheetComponent } from './sheet/sheet.component';
-import { NoteComponent } from './note/note.component';
-import { InputFormComponent } from './input-form/input-form.component';
-import { LoginPageComponent } from './login-page/login-page.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SheetComponent } from './components/sheet/sheet.component';
+import { NoteComponent } from './components/note/note.component';
+import { InputFormComponent } from './components/input-form/input-form.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
 
 @NgModule({
   declarations: [

@@ -1,4 +1,4 @@
 export class Note {
-    date: string;
+    date: number;
     text: string;
 }

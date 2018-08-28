@@ -1,4 +1,4 @@
-import { NoteService } from './../note.service';
+import { NoteInputService } from '../../services/noteInput.service';
 import { Component, Input} from '@angular/core';
 import { Note } from 
 
@@ -11,18 +11,16 @@ import { Note } from
 export class InputFormComponent{
 
   defaultValue = "";
-  date = "2018";
+  date;
 
-  constructor(private data: NoteService) { }
+  constructor(private data: NoteInputService) { }
 
   newNote(text) {
-    let date = new Date().toLocaleDateString();
+    let date = new Date();
 
     if(text){
       this.data.addNote(text, date);
     }
-    this.defaultValue= "";
-    
+    this.defaultValue = ""; 
   }
-
 }

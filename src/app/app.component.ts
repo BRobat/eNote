@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { NoteService } from './note.service';
+import { NoteInputService } from './services/noteInput.service';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [ NoteService ]
+  providers: [ NoteInputService ]
 })
 export class AppComponent {
   
