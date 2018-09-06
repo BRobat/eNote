@@ -11,16 +11,5 @@ export class NoteSourceService {
   size$: BehaviorSubject<string|null>;
   
   constructor(db: AngularFireDatabase) {
-    this.size$ = new BehaviorSubject(null);
-    this.items$ = this.size$.pipe(
-      switchMap(size => 
-        db.list('/items', ref =>
-          size ? ref.orderByChild('size').equalTo(size) : ref
-        ).snapshotChanges()
-      )
-    );
-  }
-  filterBy(size: string|null) {
-    this.size$.next(size);
-  }
+
 }
