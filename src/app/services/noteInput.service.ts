@@ -20,10 +20,8 @@ export class NoteInputService {
      let newNote = new Note;
      newNote.text = text;
      newNote.date = Date.now();
+     newNote.queueP = 1 - newNote.date;
       
      this.notesRef.push(newNote);
    }
-
-
-
 }

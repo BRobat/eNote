@@ -1,4 +1,8 @@
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Component } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+
 
 
 
@@ -10,15 +14,16 @@ import { Component } from '@angular/core';
 })
 export class SheetComponent{
 
-  notes$;
 
-  constructor() {
-    
-    
-    
+  notesRef$: AngularFireList<any>; 
+  notes$: Observable<any[]>;
+
+  constructor(db: AngularFireDatabase) {
+    this.notesRef$ = db.list("/Notes", ref => ref.orderByChild("/queueP"));
+    this.notes$ = this.notesRef$.snapshotChanges().pipe(
+      map(changes => 
+        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+        
+      ));
   }
-
-
-
-
 }
