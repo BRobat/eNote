@@ -7,9 +7,8 @@ import { switchMap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class NoteSourceService {
-  items$: Observable<AngularFireAction<firebase.database.DataSnapshot>[]>;
-  size$: BehaviorSubject<string|null>;
+
   
   constructor(db: AngularFireDatabase) {
-
+  }
 }
